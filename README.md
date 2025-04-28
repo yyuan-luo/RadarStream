@@ -3,10 +3,9 @@
 RadarStream is a real-time RAWDATA acquisition, processing, and visualization system for TI MIMO mmWave radar series. The name "RadarStream" reflects the project's capability to stream and process radar data in real-time.
 
 
-<figure>
-  <img src="https://github.com/user-attachments/assets/7ce99b51-a1af-4025-8a84-ee580eb92d04" alt="Demo1" width="100%">
-  <figcaption>Fig 1: Demo1: Real-time Motion Detection and Radar Feature Visualization</figcaption>
-</figure>
+## Demo1: Real-time Motion Detection and Radar Feature Visualization
+
+https://github.com/user-attachments/assets/7ce99b51-a1af-4025-8a84-ee580eb92d04
 
 <figure>
   <img src="img/4.gif" alt="图片描述" width="100%">
@@ -136,3 +135,10 @@ If this project helps your research, please consider citing our papers that are 
 This project references and builds upon:
 - [real-time-radar](https://github.com/AndyYu0010/real-time-radar) by AndyYu0010
 - [OpenRadar](https://github.com/PreSenseRadar/OpenRadar) - specifically the DSP module
+
+## TODO
+
+Future improvements planned for this project:
+- [ ] Validate compatibility with more RF evaluation boards
+- [ ] Migrate from PyQt5 to PySide6
+- [ ] Make the API in the libs folder more flexible
