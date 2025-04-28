@@ -1,6 +1,13 @@
 # RadarStream
 
-RadarStream is a real-time RAWDATA acquisition, processing, and visualization system for TI MIMO mmWave radar series. The name "RadarStream" reflects the project's capability to stream and process radar data in real-time, enabling various applications including gesture recognition and hand motion tracking.
+RadarStream is a real-time RAWDATA acquisition, processing, and visualization system for TI MIMO mmWave radar series. The name "RadarStream" reflects the project's capability to stream and process radar data in real-time.
+
+
+
+<figure>
+  <img src="img/4.gif" alt="图片描述" width="100%">
+  <figcaption>Fig 1: Demo1: Real-time Gesture Recognition System</figcaption>
+</figure>
 
 ## Project Overview
 
@@ -19,7 +26,6 @@ If you encounter any issues while using this project, please feel free to submit
   - Range-Doppler Information (RDI)
   - Range-Azimuth Information (RAI)
   - Range-Elevation Information (REI)
-- Gesture recognition using deep learning models
 - Interactive visualization interface
 
 ## Requirements
@@ -48,6 +54,22 @@ If you encounter any issues while using this project, please feel free to submit
 3. Connect the mmWave radar sensor and DCA1000 EVM to your computer (only need a 5V 3A DC power wire and a micro USB wire)
 4. Configure the network IPv4 settings (referencing the IPv4 configuration process from using mmWaveStudio for the DCA1000 EVM)
 
+
+<p align="center">
+  <img src="img/1.png" width="36%" />
+  <img src="img/2.png" width="45%" />
+</p>
+
+## 3D Printed Mount
+
+The repository includes STL files for a 3D printed structure designed to mount and secure the DCA1000EVM board.
+
+**Note:** There is a slight error in the DC power hole position. You will need to manually enlarge this hole for proper fit.
+
+<p align="center">
+  <img src="img/3.png" width="70%" />
+</p>
+
 ## Usage
 
 1. Run the main application:
@@ -59,11 +81,14 @@ If you encounter any issues while using this project, please feel free to submit
 4. Click "Send Config" to initialize the radar
 5. Use the interface to:
    - Visualize radar data in real-time
-   - Recognize gestures
-   - Capture training data for new gestures
+   - Capture training data for machine learning models
+
 
 ## Project Structure
-
+- `config/`: Configuration files for different radar settings
+- `gesture_icons/`: Gesture icons for visualization
+- `libs/`: Library files for radar communication
+- `STL3D`: 3D printed mount STL files
 - `main.py`: Main application entry point
 - `real_time_process.py`: Real-time data processing
 - `radar_config.py`: Radar configuration utilities
@@ -74,7 +99,7 @@ If you encounter any issues while using this project, please feel free to submit
 
 ## Citation
 
-If this project helps your research, please consider citing our papers:
+If this project helps your research, please consider citing our papers that are closely related to this tool:
 
 ```
 @article{Chen2023MMHTSR,
