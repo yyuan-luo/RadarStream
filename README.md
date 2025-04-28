@@ -51,7 +51,7 @@ If you encounter any issues while using this project, please feel free to submit
    ```
    pip install pyqt5 pyqtgraph numpy torch matplotlib pyserial
    ```
-3. Connect the mmWave radar sensor and DCA1000 EVM to your computer (only need a 5V 3A DC power wire and a micro USB wire)
+3. Connect the mmWave radar sensor and DCA1000 EVM to your computer (only need a 5V 3A DC power wire,  a Ethernet Cable, and a micro USB wire)
 4. Configure the network IPv4 settings (referencing the IPv4 configuration process from using mmWaveStudio for the DCA1000 EVM)
 
 
