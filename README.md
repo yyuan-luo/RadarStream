@@ -21,16 +21,18 @@ This system supports Texas Instruments' MIMO mmWave radar series for real-time r
 
 If you encounter any issues while using this project, please feel free to submit a pull request.
 
-## Features
+## Features ✨
 
-- Real-time radar data acquisition from TI MIMO mmWave radar sensors
-- Multi-dimensional feature extraction:
-  - Range-Time Information (RTI)
-  - Doppler-Time Information (DTI)
-  - Range-Doppler Information (RDI)
-  - Range-Azimuth Information (RAI)
-  - Range-Elevation Information (REI)
-- Interactive visualization interface
+*   **Real-time, Multi-threaded Radar Data Acquisition from TI MIMO mmWave Radar Sensors:**
+    *   Leveraging a **multi-threaded architecture 🧵** for data acquisition and processing.
+    *   To overcome Python's Global Interpreter Lock (GIL) and enable true multi-core processing, the data acquisition module is **wrapped in C 🚀**, ensuring near real-time, frame-loss-free data capture and handling.
+*   **Multi-dimensional Feature Extraction:**
+    *   Range-Time Information (RTI) 
+    *   Doppler-Time Information (DTI) 
+    *   Range-Doppler Information (RDI) 
+    *   Range-Azimuth Information (RAI) 
+    *   Range-Elevation Information (REI) 
+*   **Interactive Visualization Interface**
 
 ## Requirements
 

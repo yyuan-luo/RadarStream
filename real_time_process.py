@@ -4,12 +4,20 @@ import DSP
 from dsp.utils import Window
 from ctypes import *
 
+# 这一块处理需要手动修改代码很不友好，希望有人能pull  request
 dll = cdll.LoadLibrary('realtimeSystem/libs/UDPCAPTUREADCRAWDATA.dll')
 # dll = cdll.LoadLibrary('realtimeSystem/dll/libtest.so')
 
 a = np.zeros(1).astype(np.int)
 # 内存大小至少是frame_length的两倍 ，双缓冲区
-b = np.zeros(98305*2).astype(c_short)
+# 98304 的计算方法是例如你的配置如下：
+
+# adc_sample = 64
+# chirp = 64
+# tx_num = 3
+# rx_num = 4
+# frame_length = adc_sample * chirp * tx_num * rx_num * 2 = 98304
+b = np.zeros(98304*2).astype(c_short)
 
 # 转换为ctypes，这里转换后的可以直接利用ctypes转换为c语言中的int*，然后在c中使用
 a_ctypes_ptr = cast(a.ctypes.data, POINTER(c_int))
