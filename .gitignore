@@ -121,7 +121,7 @@ visualization/
 *.h5
 *.hdf5
 *.model
-*.bin
+# *.bin
 
 # Windows specific
 Thumbs.db
