@@ -16,7 +16,19 @@ class SerialConfig():
     def SendConfig(self, ConfigFileName):
         for line in open(ConfigFileName):
             self.CLIPort.write((line.rstrip('\r\n') + '\n').encode())
-            print(line)
+            print(f"Sent: {line.strip()}")
+
+            # 等待并读取返回数据（带超时）
+            start_time = time.time()
+            timeout = 0.1 # 2秒超时
+            response = b''
+            
+            while time.time() - start_time < timeout:
+                if self.CLIPort.in_waiting > 0:
+                    response += self.CLIPort.read(self.CLIPort.in_waiting)
+                time.sleep(0.01)  # 避免CPU占用过高
+
+            print(f"Received: {response.decode(errors='ignore').strip()}")
             time.sleep(0.01)
 
     def StartRadar(self):
