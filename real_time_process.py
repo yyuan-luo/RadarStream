@@ -4,7 +4,7 @@ import DSP
 from dsp.utils import Window
 from ctypes import *
 
-dll = cdll.LoadLibrary('realtimeSystem/libs/UDPRAWDATACAPTURE.dll')
+dll = cdll.LoadLibrary('realtimeSystem/libs/UDPCAPTUREADCRAWDATA.dll')
 # dll = cdll.LoadLibrary('realtimeSystem/dll/libtest.so')
 
 a = np.zeros(1).astype(np.int)
