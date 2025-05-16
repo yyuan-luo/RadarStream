@@ -17,6 +17,7 @@ Demo1: Real-time Motion Detection and Radar Feature Visualization
 This system supports Texas Instruments' MIMO mmWave radar series for real-time raw data acquisition, processing, and visualization. In addition to the RF evaluation board, the DCA1000EVM is required for data capture. Currently, the system has been tested with:
 - IWR6843ISK
 - IWR6843ISK-OBS
+- IWR1843ISK
 
 If you encounter any issues while using this project, please feel free to submit a pull request.
 
@@ -45,7 +46,11 @@ If you encounter any issues while using this project, please feel free to submit
 
 - TI MIMO mmWave Radar Sensor (tested with IWR6843ISK and IWR6843ISK-OBS)
 - DCA1000 EVM (essential for raw data capture)
-- PC with Windows OS (Linux coming  soon)
+- PC with Windows OS 
+
+## Firmware Requirements
+The firmware must be selected from the `mmwave_industrial_toolbox_4_10_1\labs\Out_Of_Box_Demo\prebuilt_binaries/` directory inside any version of the mmwave_industrial_toolbox.  
+There is no strict requirement to use version 4.10.1.
 
 ## Setup and Installation
 
@@ -57,17 +62,20 @@ If you encounter any issues while using this project, please feel free to submit
 3. Connect the mmWave radar sensor and DCA1000 EVM to your computer (only need a 5V 3A DC power wire,  a Ethernet Cable, and a micro USB wire)
 4. Configure the network IPv4 settings (referencing the IPv4 configuration process from using mmWaveStudio for the DCA1000 EVM)
 
+Two different acquisition methods are shown here: one figure displays Raspberry Pi 4B acquisition, while the other demonstrates Windows-based  acquisition. However, the Raspberry Pi acquisition has very few frames during real-time processing and display, making it prone to data loss. (not recommended to use Raspberry Pi for acquisition)
 
 <p align="center">
   <img src="img/1.png" width="36%" />
   <img src="img/2.png" width="45%" />
+  <img src="img/6.jpg" width="40.5%" />
+  <img src="img/7.jpg" width="40.5%" />
 </p>
 
 ## 3D Printed Mount
 
 The repository includes STL files for a 3D printed structure designed to mount and secure the DCA1000EVM board.
 
-**Note:** There is a slight error in the DC power hole position. You will need to manually enlarge this hole for proper fit.
+**Note:** You will need some M3 size nylon standoffs and screws for assembly.
 
 <p align="center">
   <img src="img/3.png" width="70%" />

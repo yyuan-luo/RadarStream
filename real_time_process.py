@@ -5,6 +5,7 @@ from dsp.utils import Window
 from ctypes import *
 
 dll = cdll.LoadLibrary('realtimeSystem/libs/UDPRAWDATACAPTURE.dll')
+# dll = cdll.LoadLibrary('realtimeSystem/dll/libtest.so')
 
 a = np.zeros(1).astype(np.int)
 # 内存大小至少是frame_length的两倍 ，双缓冲区
